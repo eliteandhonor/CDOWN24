@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+::-webkit-color-swatch {
+  border: 0;
+  border-radius: 0.5rem;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 0 0 red, -2px 0 0 blue;
+    transform: translate(0);
+  }
+  25% {
+    text-shadow: -2px 0 0 red, 2px 0 0 blue;
+    transform: translate(1px);
+  }
+  50% {
+    text-shadow: 2px 0 0 red, -2px 0 0 blue;
+    transform: translate(-1px);
+  }
+  75% {
+    text-shadow: -2px 0 0 red, 2px 0 0 blue;
+    transform: translate(1px);
+  }
+  100% {
+    text-shadow: 2px 0 0 red, -2px 0 0 blue;
+    transform: translate(0);
+  }
+}
+
+@keyframes hologram {
+  0% {
+    opacity: 0.8;
+    text-shadow: 0 0 10px rgba(255,255,255,0.8), 0 0 20px rgba(255,255,255,0.8), 0 0 30px rgba(255,255,255,0.8);
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 20px rgba(255,255,255,0.9), 0 0 40px rgba(255,255,255,0.9), 0 0 60px rgba(255,255,255,0.9);
+  }
+  100% {
+    opacity: 0.8;
+    text-shadow: 0 0 10px rgba(255,255,255,0.8), 0 0 20px rgba(255,255,255,0.8), 0 0 30px rgba(255,255,255,0.8);
+  }
+}
+
+.animate-glitch {
+  animation: glitch 1s infinite;
+}
+
+.animate-hologram {
+  animation: hologram 2s infinite;
+}
